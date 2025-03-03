@@ -141,10 +141,13 @@ button:hover {
     z-index: 2;
 }
 
-.asset:hover, .asset1:hover {
+ .asset1:hover {
     transform: rotate(10deg); 
 }
 
+.asset:hover {
+    transform: rotate(-10deg); 
+}
 .asset::after, .asset1::after {
     content: "★"; 
     position: absolute;
