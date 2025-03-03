@@ -1,0 +1,119 @@
+
+body {
+    margin:0px;
+    padding:0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;  
+    cursor: url('img/magGlass.png') 30 30, auto;
+}
+
+.container {
+    width: 100%;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/mall\ candy.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0; 
+}
+
+
+.item {
+    position: absolute;
+    opacity: 0; 
+    transition: transform 1s ease, opacity 1s ease;
+    z-index: 1; ;
+}
+
+
+.left-item {
+    transform: translateX(-100%); 
+}
+
+.left-item img{
+    width: 200px
+}
+
+
+.right-item {
+    transform: translateX(100%); 
+}
+
+.right-item img{
+    width: 200px
+}
+
+
+.item.show {
+    opacity: 1;
+    transform: translateX(0);  
+}
+
+
+h1, p {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.asset {
+    position: relative;
+    width: 300px;
+    height: 300px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
+  
+}
+
+
+.asset:hover {
+    transform: rotate(10deg); 
+    
+}
+
+.asset::after {
+    content: "★"; 
+    position: absolute;
+    font-size: 250px;
+    color: rgb(242, 255, 3);
+    opacity: 0; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none; 
+    z-index: -1;
+   
+}
+
+
+.asset:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5);
+}

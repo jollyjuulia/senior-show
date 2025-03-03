@@ -1,0 +1,239 @@
+.landing {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+
+.left{
+    height: 100vh;
+}
+
+.right{
+    height: 100vh;
+}
+
+.asset {
+    position: relative;
+    width: 300px;
+    height: 300px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
+  
+}
+
+
+.asset:hover {
+    transform: rotate(10deg);
+    
+}
+
+.asset::after {
+    content: "★"; 
+    position: absolute;
+    font-size: 50px;
+    color: gold;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none; 
+    z-index: -1;
+}
+
+
+.asset:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5); 
+}
+
+
+
+
+body {
+    cursor: url('img/magGlass.png') 30 30, auto;
+    background-image: url(img/new.png);
+   background-size: cover;
+body, img:hover {
+    cursor: url('img/magGlass.png') 90 90, auto;
+}
+
+
+img:hover {
+    transform: scale(1.1); 
+    rotate: -15deg
+}
+   
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: rgb(213, 4, 4);
+    z-index: 3;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(10, 10%);
+    grid-template-columns: repeat(9, 11.1111111111%);
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+.candy{
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+
+.candy img{
+    width: 200px;
+    rotate: -10deg;
+    display: block;
+    transform: translateX(12px); 
+}
+
+.makeup{
+    grid-row-start: 7;
+    grid-column-start: 3;
+}
+
+.makeup img{
+    display: block;
+    width: 300px;
+ 
+}
+
+
+.jacket{
+    grid-row-start: 7;
+    grid-column-start: 6;}
+
+.jacket img{
+    display: block;
+    width: 225px;
+   
+
+    
+}
+
+.png-image {
+    width: 200px; 
+    height: auto;
+    transition: 0.3s ease;
+}
+
+
+.png-image:hover {
+    content: url('img/color\ makeup.png');
+   
+    cursor: url('img/magGlass.png') 90 90, auto; 
+}
+
+
+
+.png-img {
+   
+    height: auto;
+    transition: 0.3s ease; 
+}
+
+
+.png-img:hover {
+    content: url('img/jacket\ copy.png'); 
+}
+
+
+.pngimg {
+   
+    height: auto;
+    transition: 0.3s ease; 
+}
+
+
+.pngimg:hover {
+    content: url('img/xuw21udmp4o91-2\ copy.jpg'); 
+}
+
+.p-img {
+   
+    height: auto;
+    transition: 0.3s ease; 
+}
+
+
+.p-img:hover {
+    content: url('img/candhy\ copy.png'); 
+}
+
+
+.back-img{
+    width: 600px;
+    display:flex;
+    transform: translateY(-100px) translateX(-20px); 
+}
+
+.backimg{
+    grid-column-start: 1;
+    grid-column-end: 10;
+    display: flex;
+    justify-content: center;
+    z-index: -3;
+}
+
+
+
+.scholastic{
+    grid-row-start: 3;
+    grid-column-start: 8;}
+
+.scholastic img{
+ 
+        display: inline;
+        width: 225px;
+       
+        rotate: 20deg;
+        transform: translateY(px) translateX(215px); 
+        
+}
+
+
+.text-container {
+    grid-area: 4/1/4/10; 
+    z-index: -1;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-family: serif;
+    font-size: 28px;
+    color: yellow;
+    transform: translateY(10px); 
+}
+
+  
+.hover-box {
+    position: absolute;
+    display: none;
+    padding: 10px;
+   
+   
+    color:rgb(188, 224, 223);
+  
+    font-size: 20px;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+ 
